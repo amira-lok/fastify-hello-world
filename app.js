@@ -69,7 +69,7 @@ const html = `
   </head>
   <body>
     <section>
-      <a href="https://render.com/docs/deploy-node-fastify-app">Hello from Render using Fastify!</a>
+      <a href="https://render.com/docs/deploy-node-fastify-app">Hello from Render using Fastify - Updated!</a>
     </section>
   </body>
 </html>
