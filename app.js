@@ -55,7 +55,8 @@ fastify.post('/postprocess', async function (request, reply) {
     // Iterate over the translations in the key:
     for (const [lang, v] of Object.entries(keyValue.translations)) {
       // Process the value of the translation:
-      payload.collection.keys[keyId].translations[lang].translation = v.translation.replace(/%s/g, 'this-was-a-placeholder').replace(/&nbsp;/g, '&#160;'); 
+      //payload.collection.keys[keyId].translations[lang].translation = v.translation.replace(/%s/g, 'this-was-a-placeholder').replace(/&nbsp;/g, '&#160;'); 
+      payload.collection.keys[keyId].translations[lang].translation = v.translation.replace(/&aacute;/g, '&amp;aacute;');
     }
   }
 
