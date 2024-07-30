@@ -50,16 +50,16 @@ fastify.post('/postprocess', async function (request, reply) {
   // @todo: validation
 
   // @todo: introduce timeout
-/*
+
   // Iterate over the keys in the collection:
   for (const [keyId, keyValue] of Object.entries(payload.collection.keys)) {
     // Iterate over the translations in the key:
     for (const [lang, v] of Object.entries(keyValue.translations)) {
       // Process the value of the translation:
-      //payload.collection.keys[keyId].translations[lang].translation = v.translation.replace(/%s/g, 'this-was-a-placeholder').replace(/&nbsp;/g, '&#160;'); 
+      payload.collection.keys[keyId].translations[lang].translation = v.translation.replace(/\u00A0/g, '&#160;');
       
     }
-  }*/
+  }
 
   // @todo: validate processed values
 
